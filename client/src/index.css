@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+  }
+  ::selection {
+    background: #e8a33d;
+    color: #0a0b10;
+  }
+  :focus-visible {
+    outline: 2px solid #e8a33d;
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* thin glowing connector line used on the landing page and projector */
+.connector-line {
+  background: linear-gradient(90deg, transparent, #e8a33d, transparent);
+  height: 1px;
+}
